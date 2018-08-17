@@ -37,7 +37,7 @@ module cpu(input [9:0] SW, output [9:0] LEDR);
 	mux3(AluSrc, register_file_data2_out, sign_extender_out, 0, mux3_out);	// C = 0
 	alu(AluOp, register_file_data1_out, mux3_out, alu_result, Zero);
 	assign Mux2Control=(Branch+Zero==2)? 1:0;	// Check if combined branch and 
-												// Zero control signals are both 1.
+							// Zero control signals are both 1.
 	mux2(Mux2Control, 1, sign_extender_out, mux2_out);
 	alu(0, pc_out, mux2_out, pc_in, x);		// No AluOp control input.
-                                            // No Zero wire output.
+                                            		// No Zero wire output.
