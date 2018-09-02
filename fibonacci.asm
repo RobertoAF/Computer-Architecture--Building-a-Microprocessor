@@ -10,4 +10,4 @@ add $r3, $r2, $r4		# Update current with sum of prev2    		0000 0011 0010 010
 subi $r1, $r1, 1		# Decrement counter.                		0101 0001 0001 0001
 beqz $r0, -5    		# Branch to top of loop.            		1001 0000 0000 1011
  
-halt $r3        		# Halt, outputting value of current.		1100 0000 0011 0000
+halt $r3        		# Halt, output value of current.		1100 0000 0011 0000
